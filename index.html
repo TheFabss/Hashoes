@@ -1,0 +1,3453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hashoes.pe | Catálogo Oficial de Zapatillas</title>
+  <meta name="description" content="Hashoes.pe — Zapatillas multimarca originales y RA1 en Perú. Nike, Adidas, New Balance, HOKA, On, Under Armour, Puma, Skechers, Air Jordan y Converse. Pedidos por WhatsApp." />
+  <meta name="theme-color" content="#530F0E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23580E26'/%3E%3Ccircle cx='32' cy='32' r='22' fill='%233A0717'/%3E%3Ctext x='32' y='40' font-family='Arial' font-weight='900' font-size='22' fill='white' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      /* Paleta 1: Tributary Design Studio */
+      --deep-blush: #530F0E;
+      --cashmere: #F3A0AA;
+      --rich-wood: #30150E;
+      --silk-beach: #F8E5D7;
+
+      /* Paleta 2: Complementaria */
+      --cosmic-latte: #FFF8E7;
+      --sangria: #930500;
+      --cornflower: #95BBEA;
+
+      /* Logotipo */
+      --logo-wine: #580E26;
+      --logo-circle: #3A0717;
+
+      /* Variables UI */
+      --whatsapp-green: #25D366;
+      --whatsapp-dark: #128C7E;
+      --line: rgba(83, 15, 14, 0.12);
+      --line-strong: rgba(83, 15, 14, 0.22);
+      --shadow-sm: 0 2px 10px rgba(48, 21, 14, 0.06);
+      --shadow-md: 0 12px 32px rgba(48, 21, 14, 0.12);
+      --shadow-lg: 0 24px 60px rgba(83, 15, 14, 0.24);
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --transition: all 0.3s var(--ease);
+      --header-h: 76px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--cosmic-latte);
+      color: var(--rich-wood);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.no-scroll { overflow: hidden; }
+
+    h1, h2, h3, h4, .brand-font { font-family: 'Outfit', sans-serif; }
+
+    img { display: block; max-width: 100%; }
+
+    button { font-family: inherit; }
+
+    a, button, input, select { -webkit-tap-highlight-color: transparent; }
+
+    :focus-visible {
+      outline: 3px solid var(--cornflower);
+      outline-offset: 2px;
+      border-radius: 8px;
+    }
+
+    ::selection { background: var(--cashmere); color: var(--rich-wood); }
+
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 5%; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--sangria);
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 2px;
+    }
+
+    /* ==================== LOGO ==================== */
+    .logo-mark {
+      width: 52px;
+      height: 52px;
+      background-color: var(--logo-wine);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(243, 160, 170, 0.18);
+      transition: var(--transition);
+    }
+
+    .logo-mark .logo-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--logo-circle);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .logo-mark .lm-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 0.6rem;
+      letter-spacing: -0.2px;
+      line-height: 1;
+    }
+
+    .logo-mark .lm-sub {
+      font-size: 0.26rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      margin-top: 2px;
+      opacity: 0.9;
+    }
+
+    /* ==================== TOPBAR (MARQUEE) ==================== */
+    .top-announcement {
+      background-color: var(--rich-wood);
+      color: var(--silk-beach);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      height: 34px;
+      display: flex;
+      align-items: center;
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      gap: 48px;
+      padding-right: 48px;
+      animation: marquee 38s linear infinite;
+      will-change: transform;
+    }
+
+    .top-announcement:hover .marquee-track { animation-play-state: paused; }
+
+    .marquee-track span { display: inline-flex; align-items: center; gap: 8px; }
+    .marquee-track b { color: var(--cashmere); font-weight: 800; }
+    .marquee-track i { color: var(--cashmere); font-size: 0.7rem; }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ==================== HEADER ==================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(83, 15, 14, 0.94);
+      backdrop-filter: saturate(140%) blur(14px);
+      -webkit-backdrop-filter: saturate(140%) blur(14px);
+      border-bottom: 1px solid rgba(243, 160, 170, 0.16);
+      transition: var(--transition);
+    }
+
+    header.scrolled {
+      background: rgba(48, 21, 14, 0.96);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      transition: height 0.3s var(--ease);
+    }
+
+    header.scrolled .header-inner { height: 64px; }
+    header.scrolled .logo-mark { transform: scale(0.88); }
+
+    .logo-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-text { color: var(--cosmic-latte); line-height: 1; }
+
+    .brand-text h1 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+    }
+
+    .brand-text h1 span { color: var(--cashmere); }
+
+    .brand-text p {
+      font-size: 0.62rem;
+      color: var(--cashmere);
+      text-transform: uppercase;
+      letter-spacing: 3.5px;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 6px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--silk-beach);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 8px 12px;
+      border-radius: 50px;
+      transition: var(--transition);
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: var(--cosmic-latte);
+      background: rgba(243, 160, 170, 0.14);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-wa-header {
+      background-color: rgba(255, 255, 255, 0.08);
+      color: var(--cosmic-latte);
+      border: 1px solid rgba(243, 160, 170, 0.32);
+      padding: 9px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .btn-wa-header i { font-size: 1.05rem; }
+
+    .btn-wa-header:hover {
+      background-color: var(--whatsapp-green);
+      border-color: var(--whatsapp-green);
+      color: #fff;
+    }
+
+    .cart-trigger {
+      background-color: var(--cashmere);
+      color: var(--rich-wood);
+      border: none;
+      padding: 10px 16px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .cart-trigger:hover {
+      background-color: var(--cosmic-latte);
+      transform: translateY(-2px);
+    }
+
+    .cart-count {
+      background-color: var(--sangria);
+      color: #fff;
+      font-size: 0.72rem;
+      min-width: 22px;
+      height: 22px;
+      padding: 0 6px;
+      border-radius: 20px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+
+    .cart-count.bump { animation: bump 0.55s var(--ease); }
+
+    @keyframes bump {
+      0% { transform: scale(1); }
+      35% { transform: scale(1.55); }
+      65% { transform: scale(0.88); }
+      100% { transform: scale(1); }
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(243, 160, 170, 0.32);
+      color: var(--cosmic-latte);
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    /* Menú móvil */
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: 0 5%;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s var(--ease), padding 0.35s var(--ease);
+    }
+
+    .mobile-nav.open { max-height: 420px; padding-bottom: 16px; }
+
+    .mobile-nav a {
+      color: var(--silk-beach);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: rgba(255, 248, 231, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-nav a:hover { background: rgba(243, 160, 170, 0.14); }
+
+    /* ==================== HERO ==================== */
+    .hero {
+      background:
+        radial-gradient(circle at 85% 15%, rgba(243, 160, 170, 0.18) 0%, transparent 42%),
+        radial-gradient(circle at 10% 90%, rgba(149, 187, 234, 0.12) 0%, transparent 40%),
+        linear-gradient(135deg, var(--deep-blush) 0%, var(--rich-wood) 100%);
+      color: var(--cosmic-latte);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "HASHOES";
+      position: absolute;
+      bottom: -0.18em;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: clamp(6rem, 19vw, 17rem);
+      letter-spacing: -0.04em;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(243, 160, 170, 0.12);
+      pointer-events: none;
+      white-space: nowrap;
+      line-height: 1;
+    }
+
+    .hero-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 72px 5% 96px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: rgba(149, 187, 234, 0.14);
+      border: 1px solid rgba(149, 187, 234, 0.55);
+      color: var(--cornflower);
+      padding: 7px 14px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero-tag .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--whatsapp-green);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+      animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+      70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    .hero h2 {
+      font-size: clamp(2.5rem, 5.2vw, 4.4rem);
+      line-height: 1;
+      margin-bottom: 22px;
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      text-transform: uppercase;
+    }
+
+    .hero h2 .accent { color: var(--cashmere); display: block; }
+
+    .hero h2 .outline {
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--cosmic-latte);
+    }
+
+    .hero p.lead {
+      font-size: 1.04rem;
+      color: var(--silk-beach);
+      max-width: 540px;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 38px;
+    }
+
+    .btn-primary {
+      background-color: var(--sangria);
+      color: var(--cosmic-latte);
+      padding: 14px 26px;
+      border-radius: 50px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid var(--sangria);
+      transition: var(--transition);
+      cursor: pointer;
+      font-size: 0.94rem;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .btn-primary::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.25) 50%, transparent 80%);
+      transform: translateX(-120%);
+      transition: transform 0.7s var(--ease);
+      z-index: -1;
+    }
+
+    .btn-primary:hover::before { transform: translateX(120%); }
+
+    .btn-primary:hover {
+      background-color: #b30600;
+      border-color: #b30600;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(147, 5, 0, 0.4);
+    }
+
+    .btn-primary:active { transform: translateY(0) scale(0.98); }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--silk-beach);
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 2px solid rgba(243, 160, 170, 0.6);
+      transition: var(--transition);
+      font-size: 0.94rem;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--cashmere);
+      border-color: var(--cashmere);
+      color: var(--rich-wood);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 34px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--cosmic-latte);
+    }
+
+    .hero-stat span {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--cashmere);
+      font-weight: 700;
+    }
+
+    /* Collage hero con fotos reales */
+    .hero-visual {
+      position: relative;
+      height: 500px;
+    }
+
+    .hero-photo {
+      position: absolute;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid var(--cosmic-latte);
+      background: var(--silk-beach);
+      transition: transform 0.6s var(--ease);
+    }
+
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+    .hero-photo.p1 { width: 58%; height: 72%; top: 0; left: 4%; transform: rotate(-4deg); z-index: 2; }
+    .hero-photo.p2 { width: 46%; height: 56%; top: 8%; right: 0; transform: rotate(5deg); z-index: 1; }
+    .hero-photo.p3 { width: 44%; height: 46%; bottom: 0; right: 10%; transform: rotate(-2deg); z-index: 3; }
+
+    .hero-visual:hover .p1 { transform: rotate(-6deg) translateY(-6px); }
+    .hero-visual:hover .p2 { transform: rotate(8deg) translateX(6px); }
+    .hero-visual:hover .p3 { transform: rotate(0deg) translateY(-8px); }
+
+    .hero-emblem {
+      position: absolute;
+      left: 0;
+      bottom: 4%;
+      z-index: 4;
+      width: 150px;
+      height: 150px;
+      background-color: var(--logo-wine);
+      border-radius: 26px;
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow-lg);
+      border: 2px solid rgba(243, 160, 170, 0.3);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .hero-emblem .circle {
+      width: 118px;
+      height: 118px;
+      background-color: var(--logo-circle);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .hero-emblem h3 {
+      font-size: 1.45rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+
+    .hero-emblem span {
+      font-size: 0.5rem;
+      letter-spacing: 3.5px;
+      margin-top: 6px;
+      font-weight: 700;
+      opacity: 0.9;
+    }
+
+    .floating-pill {
+      position: absolute;
+      top: 54%;
+      right: -2%;
+      z-index: 5;
+      background-color: var(--cosmic-latte);
+      color: var(--rich-wood);
+      padding: 10px 16px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 0.8rem;
+      box-shadow: var(--shadow-md);
+      border: 2px solid var(--cashmere);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      animation: float 5s ease-in-out infinite reverse;
+    }
+
+    .floating-pill i { color: var(--sangria); }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* ==================== CINTA DE MARCAS ==================== */
+    .brands-strip {
+      background: var(--cashmere);
+      color: var(--deep-blush);
+      overflow: hidden;
+      padding: 14px 0;
+      border-top: 2px solid var(--deep-blush);
+      border-bottom: 2px solid var(--deep-blush);
+      transform: rotate(-1deg);
+      margin: -14px -10px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .brands-track {
+      display: inline-flex;
+      gap: 38px;
+      padding-right: 38px;
+      white-space: nowrap;
+      animation: marquee 30s linear infinite;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: -0.3px;
+    }
+
+    .brands-track span { display: inline-flex; align-items: center; gap: 38px; }
+    .brands-track span::after { content: "✦"; font-size: 0.9rem; color: var(--sangria); }
+
+    /* ==================== BENEFICIOS ==================== */
+    .features-strip {
+      padding: 46px 5% 10px;
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px;
+      background: var(--silk-beach);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      transition: var(--transition);
+    }
+
+    .feature-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-sm);
+      border-color: var(--cashmere);
+    }
+
+    .feature-item strong {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .feature-item small {
+      font-size: 0.76rem;
+      opacity: 0.72;
+      font-weight: 500;
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background-color: var(--deep-blush);
+      color: var(--cashmere);
+      display: grid;
+      place-items: center;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+    }
+
+    /* ==================== CATÁLOGO ==================== */
+    .catalog-section {
+      padding: 56px 5% 64px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .section-header.center {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+      color: var(--deep-blush);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-top: 6px;
+      text-transform: uppercase;
+    }
+
+    .section-header p {
+      color: var(--rich-wood);
+      opacity: 0.78;
+      max-width: 520px;
+      font-size: 0.95rem;
+    }
+
+    /* Filtros */
+    .filters-container {
+      background-color: var(--silk-beach);
+      padding: 18px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      margin-bottom: 22px;
+      position: sticky;
+      top: 72px;
+      z-index: 20;
+      transition: box-shadow 0.3s var(--ease);
+    }
+
+    .filters-container.stuck { box-shadow: var(--shadow-md); }
+
+    .category-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      scroll-snap-type: x proximity;
+    }
+
+    .category-tabs::-webkit-scrollbar { display: none; }
+
+    .cat-btn {
+      background-color: var(--cosmic-latte);
+      color: var(--rich-wood);
+      border: 1px solid var(--line-strong);
+      padding: 9px 16px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+    }
+
+    .cat-btn .count {
+      background: rgba(83, 15, 14, 0.08);
+      color: var(--deep-blush);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 1px 8px;
+      border-radius: 20px;
+      transition: var(--transition);
+    }
+
+    .cat-btn:hover {
+      border-color: var(--deep-blush);
+      transform: translateY(-1px);
+    }
+
+    .cat-btn.active {
+      background-color: var(--deep-blush);
+      color: var(--cosmic-latte);
+      border-color: var(--deep-blush);
+      box-shadow: 0 6px 16px rgba(83, 15, 14, 0.25);
+    }
+
+    .cat-btn.active .count {
+      background: var(--cashmere);
+      color: var(--rich-wood);
+    }
+
+    .filter-controls {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 10px;
+    }
+
+    .input-group { position: relative; }
+
+    .input-group > i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--deep-blush);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .clear-search {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(83, 15, 14, 0.08);
+      border: none;
+      color: var(--deep-blush);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      place-items: center;
+    }
+
+    .clear-search.show { display: grid; }
+
+    .filter-input, .filter-select {
+      width: 100%;
+      height: 46px;
+      padding: 0 14px 0 40px;
+      border-radius: 14px;
+      border: 1px solid var(--line-strong);
+      background-color: var(--cosmic-latte);
+      color: var(--rich-wood);
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .filter-select {
+      padding-left: 14px;
+      padding-right: 36px;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23530F0E' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+    }
+
+    .filter-input:focus, .filter-select:focus {
+      border-color: var(--sangria);
+      box-shadow: 0 0 0 4px rgba(147, 5, 0, 0.1);
+    }
+
+    /* Estadísticas */
+    .products-stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .results-count strong { color: var(--sangria); font-weight: 800; }
+
+    .active-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .chip {
+      background: rgba(149, 187, 234, 0.28);
+      color: var(--rich-wood);
+      border: none;
+      padding: 5px 10px 5px 12px;
+      border-radius: 50px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .chip:hover { background: var(--cornflower); }
+
+    .chip.reset { background: transparent; text-decoration: underline; color: var(--sangria); }
+
+    /* ==================== GRID / TARJETAS ==================== */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    .product-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.6s var(--ease), transform 0.6s var(--ease), box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+    }
+
+    .product-card.visible:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--cashmere);
+    }
+
+    .product-img-box {
+      aspect-ratio: 4 / 4.4;
+      background: radial-gradient(circle at 50% 40%, #ffffff 0%, var(--silk-beach) 100%);
+      position: relative;
+      overflow: hidden;
+      cursor: zoom-in;
+    }
+
+    .product-img-box .photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s var(--ease), transform 0.8s var(--ease);
+    }
+
+    .product-img-box .photo.alt { opacity: 0; }
+
+    .product-card:hover .product-img-box .photo { transform: scale(1.06); }
+    .product-card:hover .product-img-box.has-alt .photo.main { opacity: 0; }
+    .product-card:hover .product-img-box.has-alt .photo.alt { opacity: 1; }
+
+    /* Shimmer mientras carga */
+    .product-img-box.loading::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.7) 50%, transparent 70%);
+      background-size: 200% 100%;
+      animation: shimmer 1.3s infinite;
+      z-index: 1;
+    }
+
+    @keyframes shimmer {
+      from { background-position: 150% 0; }
+      to { background-position: -50% 0; }
+    }
+
+    .img-fallback {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .product-img-box.no-photo .img-fallback { display: flex; }
+    .product-img-box.no-photo { cursor: default; }
+
+    .img-fallback small {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--deep-blush);
+      opacity: 0.75;
+      margin-top: 6px;
+    }
+
+    .img-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 8px;
+      background: linear-gradient(0deg, rgba(48, 21, 14, 0.55) 0%, transparent 100%);
+      z-index: 3;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: var(--transition);
+    }
+
+    .product-card:hover .img-overlay,
+    .product-card:focus-within .img-overlay { opacity: 1; transform: translateY(0); }
+
+    .overlay-btn {
+      background: rgba(255, 248, 231, 0.95);
+      color: var(--rich-wood);
+      border: none;
+      border-radius: 50px;
+      padding: 7px 12px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .overlay-btn:hover { background: var(--deep-blush); color: var(--cosmic-latte); }
+
+    .badge-row {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 6px;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .badge-stack { display: flex; flex-direction: column; gap: 5px; align-items: flex-start; }
+
+    .badge {
+      padding: 4px 10px;
+      border-radius: 50px;
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .badge-hombre { background-color: var(--deep-blush); color: var(--cosmic-latte); }
+    .badge-mujer { background-color: var(--cashmere); color: var(--rich-wood); }
+    .badge-all { background-color: var(--cosmic-latte); color: var(--deep-blush); border: 1px solid var(--line-strong); }
+
+    .badge-cond-orig { background: var(--cornflower); color: var(--rich-wood); }
+    .badge-cond-ra1 { background: var(--silk-beach); color: var(--sangria); border: 1px solid var(--cashmere); }
+
+    .item-number-pill {
+      background: rgba(48, 21, 14, 0.78);
+      color: var(--cosmic-latte);
+      padding: 3px 8px;
+      border-radius: 8px;
+      font-size: 0.66rem;
+      font-weight: 800;
+      backdrop-filter: blur(4px);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+
+    .product-info {
+      padding: 16px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-brand {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--sangria);
+      margin-bottom: 4px;
+    }
+
+    .product-title {
+      font-size: 1.04rem;
+      font-weight: 700;
+      color: var(--rich-wood);
+      margin-bottom: 8px;
+      line-height: 1.28;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .product-title:hover { color: var(--sangria); }
+
+    .exact-wa-subtitle {
+      font-size: 0.8rem;
+      color: #5a382e;
+      font-weight: 600;
+      margin-bottom: 12px;
+      background-color: var(--cosmic-latte);
+      padding: 6px 10px;
+      border-radius: 8px;
+      border-left: 3px solid var(--cashmere);
+    }
+
+    .size-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .size-tag {
+      background-color: var(--silk-beach);
+      color: var(--deep-blush);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.74rem;
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .condition-tag {
+      background-color: rgba(149, 187, 234, 0.25);
+      color: var(--rich-wood);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.74rem;
+      font-weight: 700;
+    }
+
+    .product-footer {
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px dashed var(--line-strong);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price-box .currency {
+      font-size: 0.64rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--deep-blush);
+      opacity: 0.7;
+      display: block;
+    }
+
+    .price-box .amount {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--sangria);
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .price-box .amount small { font-size: 0.8rem; font-weight: 700; margin-right: 2px; }
+
+    .card-actions { display: flex; gap: 8px; }
+
+    .btn-add-cart {
+      background-color: var(--deep-blush);
+      color: var(--cosmic-latte);
+      border: none;
+      height: 40px;
+      padding: 0 14px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .btn-add-cart:hover { background-color: var(--sangria); transform: translateY(-1px); }
+    .btn-add-cart:active { transform: scale(0.95); }
+
+    .btn-add-cart.in-cart {
+      background-color: var(--cosmic-latte);
+      color: var(--deep-blush);
+      box-shadow: inset 0 0 0 1.5px var(--deep-blush);
+    }
+
+    .btn-add-cart.just-added { animation: pop 0.45s var(--ease); }
+
+    @keyframes pop {
+      0% { transform: scale(1); }
+      40% { transform: scale(1.12); }
+      100% { transform: scale(1); }
+    }
+
+    .btn-direct-wa {
+      background-color: #fff;
+      color: var(--whatsapp-dark);
+      border: 1.5px solid rgba(18, 140, 126, 0.35);
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      text-decoration: none;
+      font-size: 1.15rem;
+      transition: var(--transition);
+      flex-shrink: 0;
+    }
+
+    .btn-direct-wa:hover {
+      background-color: var(--whatsapp-green);
+      color: #fff;
+      border-color: var(--whatsapp-green);
+      transform: translateY(-1px) rotate(-6deg);
+    }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 56px 24px;
+      background: var(--silk-beach);
+      border-radius: var(--radius-lg);
+      border: 1px dashed var(--line-strong);
+    }
+
+    .empty-state .big { font-size: 2.6rem; margin-bottom: 8px; }
+    .empty-state h3 { color: var(--deep-blush); margin-bottom: 6px; font-size: 1.3rem; }
+    .empty-state p { margin-bottom: 20px; opacity: 0.8; }
+    .empty-state .actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+    .upload-hint {
+      margin-top: 26px;
+      text-align: center;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    /* ==================== CÓMO COMPRAR ==================== */
+    .how-section {
+      background: var(--deep-blush);
+      color: var(--cosmic-latte);
+      padding: 64px 5%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .how-section .section-header h2 { color: var(--cosmic-latte); }
+    .how-section .section-header p { color: var(--silk-beach); }
+    .how-section .eyebrow { color: var(--cashmere); }
+
+    .steps {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      counter-reset: step;
+    }
+
+    .step {
+      background: rgba(255, 248, 231, 0.06);
+      border: 1px solid rgba(243, 160, 170, 0.22);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .step:hover { background: rgba(255, 248, 231, 0.1); transform: translateY(-4px); }
+
+    .step::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 2.6rem;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--cashmere);
+      display: block;
+      margin-bottom: 14px;
+    }
+
+    .step i { position: absolute; top: 24px; right: 24px; color: var(--cashmere); font-size: 1.3rem; }
+    .step h4 { font-size: 1.1rem; margin-bottom: 6px; }
+    .step p { font-size: 0.86rem; color: var(--silk-beach); opacity: 0.85; }
+
+    /* ==================== FORMULARIO ==================== */
+    .order-form-section {
+      background: linear-gradient(180deg, var(--silk-beach) 0%, var(--cosmic-latte) 100%);
+      padding: 72px 5%;
+    }
+
+    .form-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      background-color: var(--cosmic-latte);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+    }
+
+    .form-sidebar {
+      background:
+        radial-gradient(circle at 100% 0%, rgba(243, 160, 170, 0.2) 0%, transparent 50%),
+        linear-gradient(160deg, var(--deep-blush) 0%, var(--rich-wood) 100%);
+      color: var(--cosmic-latte);
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .form-sidebar h3 { font-size: 1.5rem; margin-bottom: 8px; color: var(--cashmere); }
+
+    .selected-summary-list {
+      margin: 18px 0 0;
+      max-height: 330px;
+      overflow-y: auto;
+      padding-right: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .selected-summary-list::-webkit-scrollbar { width: 6px; }
+    .selected-summary-list::-webkit-scrollbar-thumb { background: rgba(243, 160, 170, 0.4); border-radius: 6px; }
+
+    .summary-item {
+      background: rgba(255, 248, 231, 0.07);
+      border: 1px solid rgba(243, 160, 170, 0.22);
+      border-radius: 14px;
+      padding: 8px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 0.84rem;
+      animation: slideIn 0.4s var(--ease);
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(14px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .summary-thumb {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      object-fit: cover;
+      background: var(--silk-beach);
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      color: var(--deep-blush);
+      font-size: 1.2rem;
+    }
+
+    .summary-item-info { flex: 1; min-width: 0; }
+
+    .summary-item-info strong {
+      display: block;
+      color: #fff;
+      font-size: 0.86rem;
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .summary-item-info span { color: var(--cashmere); font-size: 0.74rem; display: block; }
+    .summary-item-info em { font-style: normal; font-weight: 800; color: var(--cosmic-latte); font-size: 0.82rem; }
+
+    .remove-item-btn {
+      background: rgba(255, 248, 231, 0.08);
+      border: none;
+      color: var(--cashmere);
+      cursor: pointer;
+      font-size: 0.85rem;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .remove-item-btn:hover { background: var(--sangria); color: #fff; }
+
+    .empty-summary {
+      padding: 22px 18px;
+      border: 1.5px dashed rgba(243, 160, 170, 0.4);
+      border-radius: 14px;
+      text-align: center;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+
+    .empty-summary i { font-size: 1.6rem; color: var(--cashmere); display: block; margin-bottom: 8px; }
+
+    .summary-total-box {
+      border-top: 1px solid rgba(243, 160, 170, 0.3);
+      padding-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .summary-total-box span:last-child {
+      font-family: 'Outfit', sans-serif;
+      color: var(--cashmere);
+      font-size: 1.7rem;
+      font-weight: 800;
+    }
+
+    .form-main { padding: 38px; }
+
+    .form-main h3 { font-size: 1.5rem; color: var(--deep-blush); margin-bottom: 4px; }
+
+    .form-main > p { font-size: 0.88rem; margin-bottom: 24px; opacity: 0.78; }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full-width { grid-column: 1 / -1; }
+
+    .form-group label {
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--rich-wood);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .form-control {
+      height: 48px;
+      padding: 0 14px;
+      border-radius: 12px;
+      border: 1.5px solid var(--line-strong);
+      background-color: #fff;
+      color: var(--rich-wood);
+      font-family: inherit;
+      font-size: 0.92rem;
+      font-weight: 500;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .form-control::placeholder { color: rgba(48, 21, 14, 0.4); }
+
+    .form-control:focus {
+      border-color: var(--sangria);
+      box-shadow: 0 0 0 4px rgba(147, 5, 0, 0.1);
+    }
+
+    .form-control.invalid {
+      border-color: var(--sangria);
+      background: #fff6f6;
+      animation: shake 0.35s;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
+    .payment-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 2px;
+    }
+
+    .payment-radio { position: relative; }
+
+    .payment-radio input { position: absolute; opacity: 0; pointer-events: none; }
+
+    .payment-card {
+      border: 1.5px solid var(--line-strong);
+      background-color: var(--silk-beach);
+      border-radius: 14px;
+      padding: 14px 10px;
+      text-align: center;
+      font-size: 0.82rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      position: relative;
+    }
+
+    .payment-card i { font-size: 1.2rem; color: var(--deep-blush); transition: var(--transition); }
+
+    .payment-card:hover { border-color: var(--deep-blush); }
+
+    .payment-radio input:focus-visible + .payment-card { outline: 3px solid var(--cornflower); outline-offset: 2px; }
+
+    .payment-radio input:checked + .payment-card {
+      border-color: var(--deep-blush);
+      background-color: var(--deep-blush);
+      color: var(--cosmic-latte);
+      box-shadow: 0 8px 18px rgba(83, 15, 14, 0.25);
+    }
+
+    .payment-radio input:checked + .payment-card i { color: var(--cashmere); }
+
+    .payment-radio input:checked + .payment-card::after {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--cashmere);
+      color: var(--rich-wood);
+      font-size: 0.65rem;
+      display: grid;
+      place-items: center;
+    }
+
+    .btn-submit-order {
+      margin-top: 24px;
+      width: 100%;
+      background-color: var(--sangria);
+      color: #fff;
+      border: none;
+      padding: 17px;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: var(--transition);
+      box-shadow: 0 10px 24px rgba(147, 5, 0, 0.3);
+    }
+
+    .btn-submit-order:hover { background-color: var(--deep-blush); transform: translateY(-2px); }
+
+    .btn-submit-order.is-empty {
+      background-color: #b9a59c;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+
+    .btn-submit-order.is-empty:hover { background-color: #b9a59c; transform: none; }
+
+    .needs-items .empty-summary {
+      border-color: var(--cashmere);
+      background: rgba(243, 160, 170, 0.14);
+      animation: shake 0.4s;
+    }
+
+    .form-note {
+      margin-top: 12px;
+      font-size: 0.76rem;
+      text-align: center;
+      opacity: 0.7;
+    }
+
+    /* ==================== CARRITO DRAWER ==================== */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(48, 21, 14, 0.55);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s var(--ease);
+    }
+
+    .overlay.open { opacity: 1; pointer-events: auto; }
+
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 420px;
+      height: 100%;
+      background-color: var(--cosmic-latte);
+      z-index: 201;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      transform: translateX(105%);
+      transition: transform 0.45s var(--ease);
+    }
+
+    .cart-drawer.open { transform: translateX(0); }
+
+    .cart-header {
+      background-color: var(--deep-blush);
+      color: var(--cosmic-latte);
+      padding: 20px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cart-header h3 { font-size: 1.15rem; display: flex; align-items: center; gap: 10px; }
+    .cart-header h3 small { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem; color: var(--cashmere); font-weight: 600; }
+
+    .icon-btn {
+      background: rgba(255, 248, 231, 0.1);
+      border: none;
+      color: var(--cashmere);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      display: grid;
+      place-items: center;
+    }
+
+    .icon-btn:hover { background: var(--cashmere); color: var(--rich-wood); transform: rotate(90deg); }
+
+    .cart-body {
+      padding: 18px;
+      flex-grow: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cart-body .summary-item { background: #fff; border-color: var(--line); color: var(--rich-wood); }
+    .cart-body .summary-item-info strong { color: var(--rich-wood); }
+    .cart-body .summary-item-info span { color: #7a5a4f; }
+    .cart-body .summary-item-info em { color: var(--sangria); }
+    .cart-body .remove-item-btn { background: var(--silk-beach); color: var(--deep-blush); }
+    .cart-body .remove-item-btn:hover { background: var(--sangria); color: #fff; }
+
+    .cart-empty {
+      text-align: center;
+      margin: auto;
+      padding: 30px 10px;
+    }
+
+    .cart-empty .icon {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: var(--silk-beach);
+      color: var(--deep-blush);
+      display: grid;
+      place-items: center;
+      font-size: 2rem;
+      margin: 0 auto 14px;
+    }
+
+    .cart-empty h4 { font-size: 1.15rem; color: var(--deep-blush); margin-bottom: 4px; }
+    .cart-empty p { font-size: 0.86rem; opacity: 0.75; margin-bottom: 18px; }
+
+    .cart-footer {
+      padding: 20px;
+      background-color: var(--silk-beach);
+      border-top: 1px solid var(--line);
+    }
+
+    .cart-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+
+    .cart-total-row span:last-child { font-family: 'Outfit', sans-serif; color: var(--sangria); font-size: 1.5rem; }
+
+    .cart-footer .btn-primary { width: 100%; justify-content: center; }
+
+    .cart-footer .wa-quick {
+      margin-top: 10px;
+      width: 100%;
+      justify-content: center;
+      color: var(--whatsapp-dark);
+      border-color: rgba(18, 140, 126, 0.4);
+      background: #fff;
+    }
+
+    .cart-footer .wa-quick:hover { background: var(--whatsapp-green); color: #fff; border-color: var(--whatsapp-green); }
+
+    /* ==================== QUICK VIEW MODAL ==================== */
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s var(--ease);
+    }
+
+    .modal.open { opacity: 1; pointer-events: auto; }
+
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(48, 21, 14, 0.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .modal-card {
+      position: relative;
+      background: var(--cosmic-latte);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 1000px;
+      max-height: calc(100vh - 40px);
+      overflow: auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35);
+      transform: translateY(24px) scale(0.97);
+      transition: transform 0.4s var(--ease);
+    }
+
+    .modal.open .modal-card { transform: translateY(0) scale(1); }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 5;
+      background: var(--cosmic-latte);
+      color: var(--deep-blush);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .modal-close:hover { background: var(--deep-blush); color: var(--cosmic-latte); }
+
+    .gallery {
+      background: var(--silk-beach);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .gallery-main {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #fff;
+      touch-action: pan-y;
+    }
+
+    .gallery-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: fadeIn 0.4s var(--ease);
+    }
+
+    .gallery-main .img-fallback { display: flex; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    .gal-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 248, 231, 0.92);
+      color: var(--deep-blush);
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      font-size: 0.95rem;
+    }
+
+    .gal-nav:hover { background: var(--deep-blush); color: var(--cosmic-latte); }
+    .gal-nav.prev { left: 12px; }
+    .gal-nav.next { right: 12px; }
+
+    .gal-counter {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(48, 21, 14, 0.75);
+      color: var(--cosmic-latte);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+
+    .gallery-thumbs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+
+    .gallery-thumbs button {
+      width: 68px;
+      height: 68px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      flex-shrink: 0;
+      background: #fff;
+      opacity: 0.6;
+      transition: var(--transition);
+      padding: 0;
+    }
+
+    .gallery-thumbs button img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery-thumbs button:hover { opacity: 1; }
+    .gallery-thumbs button.active { border-color: var(--sangria); opacity: 1; }
+
+    .modal-info {
+      padding: 34px 30px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .modal-info h3 {
+      font-size: 1.7rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--rich-wood);
+      padding-right: 40px;
+    }
+
+    .modal-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .modal-price {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--sangria);
+      line-height: 1;
+    }
+
+    .modal-price small { font-size: 1rem; margin-right: 4px; }
+
+    .spec-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .spec {
+      background: var(--silk-beach);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+
+    .spec span { display: block; font-size: 0.66rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--deep-blush); opacity: 0.7; }
+    .spec strong { font-size: 0.92rem; }
+
+    .modal-note {
+      font-size: 0.8rem;
+      background: rgba(149, 187, 234, 0.2);
+      border-radius: 12px;
+      padding: 10px 12px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .modal-note i { color: #3e6fa8; margin-top: 3px; }
+
+    .modal-actions { display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
+
+    .modal-actions .btn-primary { justify-content: center; }
+
+    .btn-wa-full {
+      background: #fff;
+      color: var(--whatsapp-dark);
+      border: 2px solid rgba(18, 140, 126, 0.35);
+      padding: 13px 24px;
+      border-radius: 50px;
+      font-weight: 800;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: var(--transition);
+      font-size: 0.94rem;
+    }
+
+    .btn-wa-full:hover { background: var(--whatsapp-green); color: #fff; border-color: var(--whatsapp-green); }
+
+    .btn-link {
+      background: none;
+      border: none;
+      color: var(--deep-blush);
+      font-weight: 700;
+      font-size: 0.8rem;
+      cursor: pointer;
+      text-decoration: underline;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      align-self: center;
+      opacity: 0.75;
+    }
+
+    .btn-link:hover { opacity: 1; }
+
+    /* ==================== TOAST ==================== */
+    .toast-stack {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 400;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      pointer-events: none;
+      width: calc(100% - 32px);
+      max-width: 420px;
+    }
+
+    .toast {
+      background: var(--rich-wood);
+      color: var(--cosmic-latte);
+      padding: 10px 12px 10px 10px;
+      border-radius: 16px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      pointer-events: auto;
+      animation: toastIn 0.45s var(--ease);
+      width: 100%;
+      border: 1px solid rgba(243, 160, 170, 0.25);
+    }
+
+    .toast.out { animation: toastOut 0.35s var(--ease) forwards; }
+
+    .toast img, .toast .t-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--deep-blush);
+      color: var(--cashmere);
+      display: grid;
+      place-items: center;
+    }
+
+    .toast .t-text { flex: 1; min-width: 0; line-height: 1.3; }
+    .toast .t-text small { display: block; color: var(--cashmere); font-size: 0.74rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    .toast button {
+      background: var(--cashmere);
+      color: var(--rich-wood);
+      border: none;
+      border-radius: 50px;
+      padding: 7px 12px;
+      font-weight: 800;
+      font-size: 0.76rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    @keyframes toastIn { from { opacity: 0; transform: translateY(20px) scale(0.96); } to { opacity: 1; transform: none; } }
+    @keyframes toastOut { to { opacity: 0; transform: translateY(12px) scale(0.96); } }
+
+    /* ==================== FLOTANTES ==================== */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: var(--whatsapp-green);
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 1.9rem;
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+      z-index: 99;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .wa-float::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 2px solid var(--whatsapp-green);
+      animation: ring 2.4s infinite;
+    }
+
+    @keyframes ring {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+
+    .wa-float .wa-tip {
+      position: absolute;
+      right: 72px;
+      background: var(--rich-wood);
+      color: var(--cosmic-latte);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 8px 12px;
+      border-radius: 10px;
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(8px);
+      transition: var(--transition);
+      pointer-events: none;
+    }
+
+    .wa-float:hover { transform: scale(1.08); }
+    .wa-float:hover .wa-tip { opacity: 1; transform: translateX(0); }
+
+    .to-top {
+      position: fixed;
+      bottom: 96px;
+      right: 31px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--cosmic-latte);
+      color: var(--deep-blush);
+      border: 1px solid var(--line-strong);
+      box-shadow: var(--shadow-md);
+      cursor: pointer;
+      z-index: 98;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: var(--transition);
+    }
+
+    .to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+    .to-top:hover { background: var(--deep-blush); color: var(--cosmic-latte); }
+
+    /* ==================== FOOTER ==================== */
+    footer {
+      background-color: var(--rich-wood);
+      color: var(--silk-beach);
+      padding: 56px 5% 28px;
+    }
+
+    .footer-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 36px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid rgba(243, 160, 170, 0.18);
+    }
+
+    .footer-brand .logo-wrapper { margin-bottom: 14px; }
+    .footer-brand p { font-size: 0.88rem; opacity: 0.75; max-width: 360px; }
+
+    footer h5 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cashmere);
+      margin-bottom: 14px;
+    }
+
+    footer ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+    footer ul a, footer ul button {
+      color: var(--silk-beach);
+      text-decoration: none;
+      font-size: 0.88rem;
+      opacity: 0.8;
+      transition: var(--transition);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      text-align: left;
+    }
+
+    footer ul a:hover, footer ul button:hover { opacity: 1; color: var(--cashmere); padding-left: 4px; }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 0.76rem;
+      opacity: 0.6;
+    }
+
+    /* ==================== REVEAL ==================== */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ==================== RESPONSIVE ==================== */
+    @media (max-width: 1280px) {
+      .btn-wa-header span { display: none; }
+      .btn-wa-header { padding: 0; width: 42px; height: 42px; justify-content: center; }
+    }
+
+    @media (max-width: 1100px) {
+      .features-strip { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 1060px) {
+      .nav-links { display: none; }
+      .menu-toggle { display: grid; place-items: center; }
+      .mobile-nav { display: flex; }
+      .hero-inner { grid-template-columns: 1fr; text-align: center; padding: 48px 5% 80px; gap: 36px; }
+      .hero p.lead { margin: 0 auto 26px; }
+      .hero-btns, .hero-stats { justify-content: center; }
+      .hero-visual { height: 400px; max-width: 520px; width: 100%; margin: 0 auto; }
+      .filter-controls { grid-template-columns: 1fr 1fr; }
+      .filter-controls .input-group { grid-column: 1 / -1; }
+      .form-wrapper { grid-template-columns: 1fr; }
+      .modal-card { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 640px) {
+      :root { --header-h: 66px; }
+      .btn-wa-header span, .cart-trigger .lbl { display: none; }
+      .btn-wa-header { padding: 0; width: 42px; height: 42px; justify-content: center; }
+      .brand-text h1 { font-size: 1.2rem; }
+      .logo-mark { width: 46px; height: 46px; }
+      .logo-mark .logo-circle { width: 38px; height: 38px; }
+      .hero-visual { height: 330px; }
+      .hero-emblem { width: 112px; height: 112px; border-radius: 20px; }
+      .hero-emblem .circle { width: 88px; height: 88px; }
+      .hero-emblem h3 { font-size: 1.08rem; }
+      .hero-emblem span { font-size: 0.4rem; letter-spacing: 2.5px; }
+      .hero-stats { gap: 22px; }
+      .hero-stat strong { font-size: 1.6rem; }
+      .features-strip { grid-template-columns: 1fr; padding-top: 36px; }
+      .filters-container { position: relative; top: 0; padding: 14px; }
+      .filter-controls { grid-template-columns: 1fr 1fr; }
+      .filter-controls #sortFilter { grid-column: 1 / -1; }
+      .products-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .product-info { padding: 12px; }
+      .product-title { font-size: 0.9rem; }
+      .exact-wa-subtitle { font-size: 0.7rem; padding: 5px 8px; }
+      .condition-tag { display: none; }
+      .size-tag { font-size: 0.68rem; padding: 3px 8px; }
+      .product-footer { flex-direction: column; align-items: stretch; gap: 8px; }
+      .price-box .amount { font-size: 1.15rem; }
+      .card-actions { width: 100%; }
+      .btn-add-cart { flex: 1; justify-content: center; height: 38px; padding: 0 8px; font-size: 0.76rem; }
+      .btn-direct-wa { width: 38px; height: 38px; }
+      .img-overlay { display: none; }
+      .badge { font-size: 0.58rem; padding: 3px 7px; }
+      .steps { grid-template-columns: 1fr; }
+      .form-main, .form-sidebar { padding: 24px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .payment-options { grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+      .payment-card { padding: 12px 4px; font-size: 0.72rem; }
+      .modal { padding: 0; align-items: end; }
+      .modal-card { max-height: 94vh; border-radius: 24px 24px 0 0; }
+      .modal-info { padding: 22px 20px 24px; }
+      .modal-info h3 { font-size: 1.35rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .wa-float { width: 54px; height: 54px; font-size: 1.7rem; bottom: 18px; right: 18px; }
+      .to-top { right: 22px; bottom: 84px; }
+      .toast-stack { bottom: 86px; }
+    }
+
+    @media (max-width: 360px) {
+      .products-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      .marquee-track, .brands-track { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Input oculto para cargar foto real de cualquier zapatilla del catálogo -->
+  <input type="file" id="photoUploader" accept="image/*" hidden />
+
+  <!-- Barra superior (marquee) -->
+  <div class="top-announcement" aria-label="Anuncios">
+    <div class="marquee-track" id="marqueeTrack">
+      <span><i class="fa-solid fa-fire"></i> Catálogo Oficial <b>Hashoes.pe</b></span>
+      <span><i class="fa-brands fa-whatsapp"></i> WhatsApp Business: <b>+51 915 059 030</b></span>
+      <span><i class="fa-solid fa-truck-fast"></i> Envíos a <b>Lima y provincias</b></span>
+      <span><i class="fa-solid fa-circle-check"></i> Originales · <b>RA1</b> · <b>Sin caja</b></span>
+      <span><i class="fa-solid fa-mobile-screen-button"></i> Paga con <b>Yape / Plin</b> o transferencia</span>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header id="siteHeader">
+    <div class="header-inner">
+      <a href="#" class="logo-wrapper" aria-label="Hashoes.pe inicio">
+        <div class="logo-mark" aria-hidden="true">
+          <div class="logo-circle">
+            <span class="lm-title">Hashoes</span>
+            <span class="lm-sub">ZAPATILLAS</span>
+          </div>
+        </div>
+        <div class="brand-text">
+          <h1>Hashoes<span>.pe</span></h1>
+          <p>Zapatillas</p>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#catalogo" data-nav-cat="All items">Catálogo</a></li>
+        <li><a href="#catalogo" data-nav-cat="Hombre">Hombre ⭐</a></li>
+        <li><a href="#catalogo" data-nav-cat="Mujer">Mujer 🤍</a></li>
+        <li><a href="#como-comprar">Cómo comprar</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <a href="https://wa.me/51915059030?text=Hola%20Hashoes.pe,%20vengo%20de%20la%20web%20y%20quiero%20consultar%20por%20unas%20zapatillas" target="_blank" rel="noopener" class="btn-wa-header" aria-label="Escribir por WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>+51 915 059 030</span>
+        </a>
+        <button class="cart-trigger" onclick="openCart()" aria-label="Ver mi pedido">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="lbl">Pedido</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+      <a href="#catalogo" data-nav-cat="All items">📋 All items <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="#catalogo" data-nav-cat="Hombre">⭐ Hombre <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="#catalogo" data-nav-cat="Mujer">🤍 Mujer <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="#como-comprar">🛍️ Cómo comprar <i class="fa-solid fa-chevron-right"></i></a>
+      <a href="#formulario-pedido">📝 Formulario de pedido <i class="fa-solid fa-chevron-right"></i></a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="dot"></span> Stock real · <span id="heroCountTag">37</span> pares disponibles
+        </div>
+        <h2>
+          Pisa con <span class="outline">estilo.</span>
+          <span class="accent">Hashoes.pe</span>
+        </h2>
+        <p class="lead">Zapatillas multimarca originales y RA1 seleccionadas una a una. Nike, Adidas, New Balance, HOKA, On, Under Armour, Puma, Skechers, Air Jordan y Converse — con tu talla exacta en EUR y CM.</p>
+        <div class="hero-btns">
+          <a href="#catalogo" class="btn-primary">
+            <i class="fa-solid fa-shoe-prints"></i> Ver catálogo
+          </a>
+          <a href="#formulario-pedido" class="btn-secondary">
+            <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong data-count id="statProducts">37</strong><span>Modelos</span></div>
+          <div class="hero-stat"><strong data-count id="statBrands">10</strong><span>Marcas</span></div>
+          <div class="hero-stat"><strong id="statFrom">S/ 60</strong><span>Desde</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual" id="heroVisual">
+        <div class="hero-photo p1"></div>
+        <div class="hero-photo p2"></div>
+        <div class="hero-photo p3"></div>
+        <div class="hero-emblem" aria-hidden="true">
+          <div class="circle">
+            <h3>Hashoes</h3>
+            <span>ZAPATILLAS</span>
+          </div>
+        </div>
+        <div class="floating-pill"><i class="fa-solid fa-circle-check"></i> Fotos reales de cada par</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cinta de marcas -->
+  <div class="brands-strip" aria-hidden="true">
+    <div class="brands-track" id="brandsTrack"></div>
+  </div>
+
+  <!-- Beneficios -->
+  <div class="features-strip">
+    <div class="feature-item reveal">
+      <div class="feature-icon"><i class="fa-solid fa-ruler-horizontal"></i></div>
+      <div><strong>Tallas exactas</strong><small>EUR y centímetros por par</small></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-icon"><i class="fa-solid fa-box-open"></i></div>
+      <div><strong>Orig · RA1 · Sin caja</strong><small>Detalle transparente</small></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-icon"><i class="fa-solid fa-camera"></i></div>
+      <div><strong>Fotos reales</strong><small>Del par que recibes</small></div>
+    </div>
+    <div class="feature-item reveal">
+      <div class="feature-icon"><i class="fa-brands fa-whatsapp"></i></div>
+      <div><strong>+51 915 059 030</strong><small>Atención directa</small></div>
+    </div>
+  </div>
+
+  <!-- Catálogo -->
+  <section class="catalog-section" id="catalogo">
+    <div class="section-header">
+      <div>
+        <span class="eyebrow">Catálogo oficial</span>
+        <h2>Encuentra tu par</h2>
+      </div>
+      <p>100% sincronizado con las colecciones de nuestro catálogo de WhatsApp Business. Cada modelo es un par único.</p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filters-container" id="filtersBar">
+      <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="Colecciones"></div>
+
+      <div class="filter-controls">
+        <div class="input-group">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" id="searchInput" class="filter-input" placeholder="Buscar modelo (ej. Campus, 530, Bondi, Surge, Metcon...)" autocomplete="off" aria-label="Buscar modelo" />
+          <button type="button" class="clear-search" id="clearSearch" aria-label="Limpiar búsqueda"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <select id="sizeFilter" class="filter-select" aria-label="Filtrar por talla">
+          <option value="Todas">📏 Tallas</option>
+        </select>
+
+        <select id="brandFilter" class="filter-select" aria-label="Filtrar por marca">
+          <option value="Todas">🏷️ Marcas</option>
+        </select>
+
+        <select id="sortFilter" class="filter-select" aria-label="Ordenar">
+          <option value="default">⚡ Orden del catálogo</option>
+          <option value="price-asc">Precio: menor a mayor</option>
+          <option value="price-desc">Precio: mayor a menor</option>
+          <option value="size-asc">Talla: menor a mayor</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="products-stats">
+      <span class="results-count" id="resultsCount" aria-live="polite"></span>
+      <div class="active-chips" id="activeChips"></div>
+    </div>
+
+    <!-- Grid dinámico -->
+    <div class="products-grid" id="productsGrid"></div>
+
+    <p class="upload-hint"><i class="fa-solid fa-circle-info"></i> ¿Falta la foto de algún modelo? Pasa el cursor sobre la tarjeta y usa <strong>“Foto”</strong> para asignar una imagen local.</p>
+  </section>
+
+  <!-- Cómo comprar -->
+  <section class="how-section" id="como-comprar">
+    <div class="section-header center" style="max-width:1400px; margin:0 auto 34px;">
+      <span class="eyebrow">Simple y seguro</span>
+      <h2>Cómo comprar</h2>
+      <p>Todo el cierre de venta se coordina por WhatsApp Business con atención personalizada.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><i class="fa-solid fa-magnifying-glass"></i><h4>Elige tu par</h4><p>Filtra por colección, talla o marca y revisa las fotos reales.</p></div>
+      <div class="step reveal"><i class="fa-solid fa-bag-shopping"></i><h4>Agrégalo al pedido</h4><p>Puedes sumar varios pares. Cada modelo es una unidad única.</p></div>
+      <div class="step reveal"><i class="fa-regular fa-clipboard"></i><h4>Completa tus datos</h4><p>Envío a Lima o provincia (Shalom / Olva) y método de pago.</p></div>
+      <div class="step reveal"><i class="fa-brands fa-whatsapp"></i><h4>Confirma por WhatsApp</h4><p>Te llega el pedido listo al +51 915 059 030 para coordinar.</p></div>
+    </div>
+  </section>
+
+  <!-- Formulario de pedido -->
+  <section class="order-form-section" id="formulario-pedido">
+    <div class="section-header center" style="max-width:1100px; margin:0 auto 30px;">
+      <span class="eyebrow">Checkout</span>
+      <h2>Formulario de pedido</h2>
+      <p>Completa tus datos y enviaremos tu pedido estructurado a nuestro WhatsApp Business (+51 915 059 030).</p>
+    </div>
+
+    <div class="form-wrapper reveal">
+      <!-- Resumen lateral -->
+      <div class="form-sidebar">
+        <div>
+          <h3>Tu selección</h3>
+          <p style="font-size: 0.85rem; opacity: 0.85;">
+            Agrega zapatillas desde el catálogo con el botón <strong>“Agregar”</strong>.
+          </p>
+          <div class="selected-summary-list" id="formSummaryList"></div>
+        </div>
+
+        <div>
+          <div class="summary-total-box">
+            <span>Total estimado</span>
+            <span id="formTotalAmount">PEN 0.00</span>
+          </div>
+          <p style="font-size: 0.76rem; color: var(--cashmere); margin-top: 8px;">
+            <i class="fa-solid fa-truck-fast"></i> Envíos a todo Lima y provincias. Costo de envío se coordina por WhatsApp.
+          </p>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="form-main">
+        <h3>Datos de envío y facturación</h3>
+        <p>Al presionar enviar, se abrirá WhatsApp Business (+51 915 059 030) con el detalle listo.</p>
+
+        <form id="amankayStyleForm" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="clientName">Nombre completo *</label>
+              <input type="text" id="clientName" class="form-control" placeholder="Ej. Fabián Román" autocomplete="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="clientDoc">DNI / RUC *</label>
+              <input type="text" id="clientDoc" class="form-control" placeholder="8 u 11 dígitos" inputmode="numeric" maxlength="11" required />
+            </div>
+
+            <div class="form-group">
+              <label for="clientPhone">Celular / WhatsApp *</label>
+              <input type="tel" id="clientPhone" class="form-control" placeholder="Ej. 999 888 777" autocomplete="tel" required />
+            </div>
+
+            <div class="form-group">
+              <label for="deliveryType">Modalidad de entrega *</label>
+              <select id="deliveryType" class="form-control filter-select" style="padding-left:14px" required>
+                <option value="Delivery Lima Metropolitana">🛵 Delivery Lima Metropolitana</option>
+                <option value="Envío a Provincia (Shalom / Olva)">📦 Envío a Provincia (Shalom / Olva)</option>
+                <option value="Entrega Coordinada">🤝 Entrega Coordinada</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="clientDistrict">Distrito / Ciudad *</label>
+              <input type="text" id="clientDistrict" class="form-control" placeholder="Ej. Miraflores / Arequipa" required />
+            </div>
+
+            <div class="form-group">
+              <label for="clientAddress">Dirección o agencia destino *</label>
+              <input type="text" id="clientAddress" class="form-control" placeholder="Av. / Calle / Agencia Shalom..." autocomplete="street-address" required />
+            </div>
+
+            <div class="form-group full-width">
+              <label>Método de pago preferido *</label>
+              <div class="payment-options">
+                <label class="payment-radio">
+                  <input type="radio" name="paymentMethod" value="Yape / Plin" checked />
+                  <div class="payment-card">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>Yape / Plin</span>
+                  </div>
+                </label>
+                <label class="payment-radio">
+                  <input type="radio" name="paymentMethod" value="Transferencia Bancaria" />
+                  <div class="payment-card">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <span>Transferencia</span>
+                  </div>
+                </label>
+                <label class="payment-radio">
+                  <input type="radio" name="paymentMethod" value="Coordinar por WhatsApp" />
+                  <div class="payment-card">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Coordinar</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="clientNotes">Notas adicionales / referencia (opcional)</label>
+              <input type="text" id="clientNotes" class="form-control" placeholder="Referencia de domicilio o consulta adicional..." />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-submit-order" id="submitOrderBtn" aria-describedby="submitOrderHint">
+            <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i>
+            <span id="submitOrderLabel">Enviar pedido a Hashoes.pe</span>
+          </button>
+          <p class="form-note" id="submitOrderHint"><i class="fa-solid fa-lock"></i> Tus datos solo se usan para coordinar tu pedido por WhatsApp.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Drawer del carrito -->
+  <div class="overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Tu pedido" aria-hidden="true">
+    <div class="cart-header">
+      <h3><i class="fa-solid fa-bag-shopping"></i> Tu pedido <small id="drawerCountLabel"></small></h3>
+      <button class="icon-btn" onclick="closeCart()" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-body" id="drawerCartList"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span id="drawerTotalAmount">PEN 0.00</span>
+      </div>
+      <a href="#formulario-pedido" class="btn-primary" onclick="closeCart()">
+        Continuar al formulario <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a href="#" target="_blank" rel="noopener" class="btn-wa-full wa-quick" id="drawerWaQuick">
+        <i class="fa-brands fa-whatsapp"></i> Consultar disponibilidad
+      </a>
+    </div>
+  </aside>
+
+  <!-- Quick view -->
+  <div class="modal" id="quickView" role="dialog" aria-modal="true" aria-labelledby="qvTitle" aria-hidden="true">
+    <div class="modal-backdrop" onclick="closeQuickView()"></div>
+    <div class="modal-card" id="qvCard"></div>
+  </div>
+
+  <!-- Toasts -->
+  <div class="toast-stack" id="toastStack" aria-live="polite"></div>
+
+  <!-- Flotantes -->
+  <button class="to-top" id="toTop" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></button>
+  <a href="https://wa.me/51915059030?text=Hola%20Hashoes.pe,%20quisiera%20consultar%20por%20disponibilidad%20de%20zapatillas" target="_blank" rel="noopener" class="wa-float" aria-label="Chatear por WhatsApp Business">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-tip">¿Dudas? Escríbenos</span>
+  </a>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo-wrapper">
+          <div class="logo-mark" aria-hidden="true">
+            <div class="logo-circle">
+              <span class="lm-title">Hashoes</span>
+              <span class="lm-sub">ZAPATILLAS</span>
+            </div>
+          </div>
+          <div class="brand-text">
+            <h1 style="font-size:1.3rem">Hashoes<span>.pe</span></h1>
+            <p>Zapatillas</p>
+          </div>
+        </a>
+        <p>Startup peruana de zapatillas multimarca: pares originales nuevos y calidad RA1, seleccionados uno a uno.</p>
+      </div>
+      <div>
+        <h5>Colecciones</h5>
+        <ul>
+          <li><button data-nav-cat="All items">All items</button></li>
+          <li><button data-nav-cat="Hombre">Hombre ⭐</button></li>
+          <li><button data-nav-cat="Mujer">Mujer 🤍</button></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <ul>
+          <li><a href="https://wa.me/51915059030" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> +51 915 059 030</a></li>
+          <li><a href="#formulario-pedido"><i class="fa-regular fa-clipboard"></i> Formulario de pedido</a></li>
+          <li><a href="#como-comprar"><i class="fa-solid fa-circle-question"></i> Cómo comprar</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Hashoes.pe — Todos los derechos reservados.</span>
+      <span>Precios en Soles (PEN) · Lima, Perú</span>
+    </div>
+  </footer>
+
+  <!-- Datos del catálogo (editar en productos.js) -->
+  <script src="productos.js"></script>
+
+  <!-- Lógica JavaScript -->
+  <script>
+    const WHATSAPP_NUMBER = "51915059030";
+
+
+    /* =========================================================================
+       ESTADO Y UTILIDADES
+       ========================================================================= */
+    const CATEGORIES = [
+      { key: "All items", label: "All items", icon: "📋" },
+      { key: "Hombre", label: "Hombre", icon: "⭐" },
+      { key: "Mujer", label: "Mujer", icon: "🤍" },
+      { key: "Todas Mujer", label: "Todos los modelos Mujer", icon: "👟" }
+    ];
+
+    const BRAND_LABELS = { "On Cloud": "On Cloud / On Running" };
+
+    const store = {
+      get(key, fallback) {
+        try {
+          const raw = localStorage.getItem(key);
+          return raw ? JSON.parse(raw) : fallback;
+        } catch (e) { return fallback; }
+      },
+      set(key, value) {
+        try { localStorage.setItem(key, JSON.stringify(value)); return true; }
+        catch (e) { return false; }
+      }
+    };
+
+    const $ = (id) => document.getElementById(id);
+    const money = (n) => `PEN ${n.toFixed(2)}`;
+    const esc = (s) => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    const norm = (s) => String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+    const parseSize = (s) => {
+      const [whole, frac] = String(s).split(" ");
+      let n = parseFloat(whole);
+      if (frac && frac.includes("/")) { const [a, b] = frac.split("/"); n += a / b; }
+      return n;
+    };
+    const productById = (id) => products.find(p => p.id === id);
+
+    let currentCategory = "All items";
+    let customPhotos = store.get("hashoes_custom_photos", {});
+    let activeUploadProductId = null;
+
+    // Carrito: lista de ids (cada modelo es un par único). Migra el formato anterior.
+    let cart = store.get("hashoes_cart_v3", null);
+    if (!Array.isArray(cart)) {
+      const legacy = store.get("hashoes_cart_v2", []);
+      cart = Array.isArray(legacy) ? legacy.map(i => (typeof i === "object" ? i.id : i)) : [];
+    }
+    cart = [...new Set(cart)].filter(id => productById(id));
+
+    // Galería de fotos por producto
+    function getGallery(p) {
+      const base = p.photos && p.photos.length ? p.photos.map(f => IMG_BASE + f) : [p.img];
+      return customPhotos[p.id] ? [customPhotos[p.id], ...base] : base;
+    }
+
+    function getCover(p) { return getGallery(p)[0]; }
+
+    function getBadgeInfo(p) {
+      if (p.collections.includes("Hombre")) return { text: "Hombre ⭐", cls: "badge-hombre" };
+      if (p.collections.includes("Mujer")) return { text: "Mujer 🤍", cls: "badge-mujer" };
+      if (p.collections.includes("Todas Mujer")) return { text: "Mujer", cls: "badge-mujer" };
+      return null;
+    }
+
+    function getConditionBadge(p) {
+      const d = p.detail.toLowerCase();
+      if (d.includes("ra1")) return { text: "RA1", cls: "badge-cond-ra1" };
+      if (d.includes("orig")) return { text: "Original", cls: "badge-cond-orig" };
+      return null;
+    }
+
+    // Vector SVG limpio con los colores del modelo (fallback si no hay foto)
+    function renderSneakerSVG(p) {
+      const [c1, c2, c3] = p.colors;
+      return `
+        <div class="img-fallback">
+          <svg viewBox="0 0 260 135" width="78%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <ellipse cx="130" cy="124" rx="105" ry="6" fill="rgba(48,21,14,0.12)" />
+            <path d="M20 98 Q130 104 240 96 L244 114 Q130 120 18 112 Z" fill="${c3}" stroke="#30150E" stroke-width="2"/>
+            <path d="M22 98 L28 52 Q52 48 76 64 L126 34 Q148 34 162 56 L228 72 Q245 80 240 96 Z" fill="${c1}" stroke="#30150E" stroke-width="2.2"/>
+            <path d="M72 88 L128 56 L172 78 L112 96 Z" fill="${c2}" opacity="0.92"/>
+            <line x1="98" y1="48" x2="112" y2="56" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="112" y1="42" x2="126" y2="50" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+            <line x1="126" y1="37" x2="140" y2="45" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+          </svg>
+          <small>Foto disponible por WhatsApp</small>
+        </div>
+      `;
+    }
+
+    function imgLoaded(img) {
+      const box = img.closest(".product-img-box");
+      if (box) box.classList.remove("loading");
+    }
+
+    function imgFailed(img) {
+      const box = img.closest(".product-img-box");
+      if (!box) return;
+      if (img.classList.contains("alt")) { box.classList.remove("has-alt"); img.remove(); return; }
+      box.classList.remove("loading", "has-alt");
+      box.classList.add("no-photo");
+      box.querySelectorAll("img.photo").forEach(i => i.remove());
+    }
+
+    /* =========================================================================
+       FILTROS
+       ========================================================================= */
+    function buildFilters() {
+      // Pestañas con conteo real
+      $("categoryTabs").innerHTML = CATEGORIES.map(c => {
+        const count = products.filter(p => p.collections.includes(c.key)).length;
+        return `<button class="cat-btn${c.key === currentCategory ? " active" : ""}" data-cat="${c.key}" role="tab" aria-selected="${c.key === currentCategory}" onclick="filterByCategory('${c.key}')">
+          ${c.icon} ${c.label} <span class="count">${count}</span>
+        </button>`;
+      }).join("");
+
+      // Tallas (con rango de cm real del catálogo)
+      const sizes = {};
+      products.forEach(p => {
+        const cm = parseFloat(p.cm);
+        (sizes[p.size] = sizes[p.size] || { cms: new Set(), count: 0 }).count++;
+        sizes[p.size].cms.add(cm);
+      });
+      const sizeOpts = Object.keys(sizes).sort((a, b) => parseSize(a) - parseSize(b)).map(s => {
+        const cms = [...sizes[s].cms].sort((a, b) => a - b);
+        const range = cms.length > 1 ? `${cms[0]} - ${cms[cms.length - 1]}cm` : `${cms[0]}cm`;
+        return `<option value="${s}">Talla ${s} (${range}) · ${sizes[s].count}</option>`;
+      }).join("");
+      $("sizeFilter").insertAdjacentHTML("beforeend", sizeOpts);
+
+      // Marcas
+      const brands = {};
+      products.forEach(p => brands[p.brand] = (brands[p.brand] || 0) + 1);
+      $("brandFilter").insertAdjacentHTML("beforeend",
+        Object.keys(brands).sort().map(b => `<option value="${b}">${BRAND_LABELS[b] || b} · ${brands[b]}</option>`).join("")
+      );
+    }
+
+    function filterByCategory(category) {
+      currentCategory = category;
+      document.querySelectorAll(".cat-btn").forEach(btn => {
+        const on = btn.dataset.cat === category;
+        btn.classList.toggle("active", on);
+        btn.setAttribute("aria-selected", on);
+        if (on) btn.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
+      });
+      renderProducts();
+    }
+
+    function getFilters() {
+      return {
+        search: norm($("searchInput").value.trim()),
+        size: $("sizeFilter").value,
+        brand: $("brandFilter").value,
+        sort: $("sortFilter").value
+      };
+    }
+
+    function renderChips(f) {
+      const chips = [];
+      if (currentCategory !== "All items") {
+        const c = CATEGORIES.find(c => c.key === currentCategory);
+        chips.push(`<button class="chip" onclick="filterByCategory('All items')">${c.icon} ${c.label} <i class="fa-solid fa-xmark"></i></button>`);
+      }
+      if (f.size !== "Todas") chips.push(`<button class="chip" onclick="clearFilter('sizeFilter')">Talla ${f.size} <i class="fa-solid fa-xmark"></i></button>`);
+      if (f.brand !== "Todas") chips.push(`<button class="chip" onclick="clearFilter('brandFilter')">${BRAND_LABELS[f.brand] || f.brand} <i class="fa-solid fa-xmark"></i></button>`);
+      if (f.search) chips.push(`<button class="chip" onclick="clearFilter('searchInput')">“${esc($("searchInput").value.trim())}” <i class="fa-solid fa-xmark"></i></button>`);
+      if (chips.length > 1) chips.push(`<button class="chip reset" onclick="resetFilters()">Limpiar todo</button>`);
+      $("activeChips").innerHTML = chips.join("");
+    }
+
+    function clearFilter(id) {
+      const el = $(id);
+      el.value = id === "searchInput" ? "" : "Todas";
+      $("clearSearch").classList.toggle("show", !!$("searchInput").value);
+      renderProducts();
+    }
+
+    function resetFilters() {
+      $("searchInput").value = "";
+      $("sizeFilter").value = "Todas";
+      $("brandFilter").value = "Todas";
+      $("sortFilter").value = "default";
+      $("clearSearch").classList.remove("show");
+      filterByCategory("All items");
+    }
+
+    /* =========================================================================
+       RENDER DEL CATÁLOGO
+       ========================================================================= */
+    let cardObserver = null;
+
+    function renderProducts() {
+      const f = getFilters();
+
+      let filtered = products.filter(p => {
+        const matchCat = p.collections.includes(currentCategory);
+        const matchSearch = !f.search ||
+          norm(p.name).includes(f.search) ||
+          norm(p.subtitle).includes(f.search) ||
+          norm(p.brand).includes(f.search);
+        const matchSize = f.size === "Todas" || p.size === f.size;
+        const matchBrand = f.brand === "Todas" || p.brand === f.brand;
+        return matchCat && matchSearch && matchSize && matchBrand;
+      });
+
+      if (f.sort === "price-asc") filtered.sort((a, b) => a.price - b.price);
+      if (f.sort === "price-desc") filtered.sort((a, b) => b.price - a.price);
+      if (f.sort === "size-asc") filtered.sort((a, b) => parseSize(a.size) - parseSize(b.size));
+
+      $("resultsCount").innerHTML = `Mostrando <strong>${filtered.length}</strong> de ${products.length} zapatillas del catálogo`;
+      renderChips(f);
+
+      const grid = $("productsGrid");
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="empty-state">
+            <div class="big">👟</div>
+            <h3>No hay coincidencias con ese filtro</h3>
+            <p>Limpia los filtros o consúltanos por WhatsApp: puede que tengamos tu talla fuera del catálogo.</p>
+            <div class="actions">
+              <button class="btn-primary" onclick="resetFilters()"><i class="fa-solid fa-rotate-left"></i> Ver los ${products.length} modelos</button>
+              <a class="btn-wa-full" target="_blank" rel="noopener" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola Hashoes.pe! Estoy buscando zapatillas" + (f.size !== "Todas" ? " talla " + f.size : "") + (f.brand !== "Todas" ? " marca " + f.brand : "") + ". ¿Tienen disponibles?")}"><i class="fa-brands fa-whatsapp"></i> Preguntar por WhatsApp</a>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => renderCard(p)).join("");
+      observeCards();
+    }
+
+    function renderCard(p) {
+      const badge = getBadgeInfo(p);
+      const cond = getConditionBadge(p);
+      const gallery = getGallery(p);
+      const inCart = cart.includes(p.id);
+      const name = esc(p.name);
+      const directMsg = encodeURIComponent(
+        `Hola Hashoes.pe! Me interesa el modelo *${p.name}* (${p.subtitle}) de PEN${p.price.toFixed(2)}. ¿Sigue disponible?`
+      );
+      const hasAlt = gallery.length > 1;
+
+      return `
+        <article class="product-card" data-id="${p.id}">
+          <div class="product-img-box loading${hasAlt ? " has-alt" : ""}" onclick="openQuickView(${p.id})">
+            <img class="photo main" src="${gallery[0]}" alt="${name}" loading="lazy" decoding="async" onload="imgLoaded(this)" onerror="imgFailed(this)" />
+            ${hasAlt ? `<img class="photo alt" src="${gallery[1]}" alt="" loading="lazy" decoding="async" onerror="imgFailed(this)" />` : ""}
+            ${renderSneakerSVG(p)}
+            <div class="badge-row">
+              <div class="badge-stack">
+                ${badge ? `<span class="badge ${badge.cls}">${badge.text}</span>` : ""}
+                ${cond ? `<span class="badge ${cond.cls}">${cond.text}</span>` : ""}
+              </div>
+              <span class="item-number-pill">#${p.id}${gallery.length > 1 ? ` · <i class="fa-regular fa-images"></i> ${gallery.length}` : ""}</span>
+            </div>
+            <div class="img-overlay">
+              <button type="button" class="overlay-btn" onclick="event.stopPropagation(); openQuickView(${p.id})"><i class="fa-regular fa-eye"></i> Vista rápida</button>
+              <button type="button" class="overlay-btn" onclick="event.stopPropagation(); triggerPhotoUpload(${p.id})" title="Cargar foto local"><i class="fa-solid fa-camera"></i> Foto</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <span class="product-brand">${esc(p.brand)}</span>
+            <h3 class="product-title" onclick="openQuickView(${p.id})">${name}</h3>
+            <div class="exact-wa-subtitle">${esc(p.subtitle)}</div>
+            <div class="size-specs">
+              <span class="size-tag"><i class="fa-solid fa-ruler"></i> Talla ${p.size} · ${p.cm}</span>
+              <span class="condition-tag">${esc(p.detail)}</span>
+            </div>
+            <div class="product-footer">
+              <div class="price-box">
+                <span class="currency">PRECIO</span>
+                <span class="amount"><small>PEN</small>${p.price.toFixed(2)}</span>
+              </div>
+              <div class="card-actions">
+                <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${directMsg}" target="_blank" rel="noopener" class="btn-direct-wa" title="Consultar directo por WhatsApp" aria-label="Consultar ${name} por WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <button class="btn-add-cart${inCart ? " in-cart" : ""}" data-add="${p.id}" onclick="toggleInCart(${p.id}, this)">
+                  ${inCart ? `<i class="fa-solid fa-check"></i> En pedido` : `<i class="fa-solid fa-plus"></i> Agregar`}
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function observeCards() {
+      const cards = document.querySelectorAll(".product-card:not(.visible)");
+      if (!("IntersectionObserver" in window)) { cards.forEach(c => c.classList.add("visible")); return; }
+      if (!cardObserver) {
+        cardObserver = new IntersectionObserver(entries => {
+          let i = 0;
+          entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            const el = e.target;
+            setTimeout(() => el.classList.add("visible"), (i++ % 8) * 60);
+            cardObserver.unobserve(el);
+          });
+        }, { rootMargin: "0px 0px -40px 0px", threshold: 0.05 });
+      }
+      cards.forEach(c => cardObserver.observe(c));
+    }
+
+    /* =========================================================================
+       FOTO MANUAL (cargador local)
+       ========================================================================= */
+    function triggerPhotoUpload(productId) {
+      activeUploadProductId = productId;
+      $("photoUploader").value = "";
+      $("photoUploader").click();
+    }
+
+    $("photoUploader").addEventListener("change", function (e) {
+      const file = e.target.files[0];
+      if (!file || !activeUploadProductId) return;
+      const reader = new FileReader();
+      reader.onload = function (ev) {
+        // Reduce la imagen para no saturar el almacenamiento del navegador
+        const img = new Image();
+        img.onload = () => {
+          const max = 900;
+          const scale = Math.min(1, max / Math.max(img.width, img.height));
+          const canvas = document.createElement("canvas");
+          canvas.width = Math.round(img.width * scale);
+          canvas.height = Math.round(img.height * scale);
+          canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+          customPhotos[activeUploadProductId] = canvas.toDataURL("image/jpeg", 0.82);
+          if (!store.set("hashoes_custom_photos", customPhotos)) {
+            showToast({ title: "Foto aplicada solo en esta sesión", sub: "El navegador no tiene espacio para guardarla" });
+          } else {
+            showToast({ title: "Foto actualizada", sub: productById(activeUploadProductId).name, img: customPhotos[activeUploadProductId] });
+          }
+          renderProducts();
+        };
+        img.src = ev.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    function removeCustomPhoto(productId) {
+      delete customPhotos[productId];
+      store.set("hashoes_custom_photos", customPhotos);
+      renderProducts();
+      openQuickView(productId);
+    }
+
+    /* =========================================================================
+       CARRITO / PEDIDO
+       ========================================================================= */
+    function addToCart(productId) {
+      if (cart.includes(productId)) return false;
+      cart.push(productId);
+      saveAndSyncCart(true);
+      return true;
+    }
+
+    function removeFromCart(productId) {
+      cart = cart.filter(id => id !== productId);
+      saveAndSyncCart();
+    }
+
+    function toggleInCart(productId, btn) {
+      const p = productById(productId);
+      if (cart.includes(productId)) {
+        openCart();
+        return;
+      }
+      addToCart(productId);
+      if (btn) {
+        btn.classList.add("just-added");
+        setTimeout(() => btn.classList.remove("just-added"), 450);
+      }
+      showToast({
+        title: "Agregado a tu pedido",
+        sub: `${p.name} · ${money(p.price)}`,
+        img: getCover(p),
+        action: { label: "Ver pedido", fn: openCart }
+      });
+    }
+
+    function syncCartButtons() {
+      document.querySelectorAll("[data-add]").forEach(btn => {
+        const inCart = cart.includes(Number(btn.dataset.add));
+        btn.classList.toggle("in-cart", inCart);
+        btn.innerHTML = inCart ? `<i class="fa-solid fa-check"></i> En pedido` : `<i class="fa-solid fa-plus"></i> Agregar`;
+      });
+    }
+
+    function cartItemHtml(item) {
+      const cover = getCover(item);
+      return `
+        <div class="summary-item">
+          <img class="summary-thumb" src="${cover}" alt="" onerror="this.outerHTML='<div class=&quot;summary-thumb&quot;><i class=&quot;fa-solid fa-shoe-prints&quot;></i></div>'" />
+          <div class="summary-item-info">
+            <strong title="${esc(item.name)}">${esc(item.name)}</strong>
+            <span>Talla ${item.size} · ${item.cm} · ${esc(item.detail)}</span>
+            <em>${money(item.price)}</em>
+          </div>
+          <button type="button" class="remove-item-btn" onclick="removeFromCart(${item.id})" title="Quitar" aria-label="Quitar ${esc(item.name)}">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </div>
+      `;
+    }
+
+    function saveAndSyncCart(bump) {
+      store.set("hashoes_cart_v3", cart);
+      const items = cart.map(productById);
+
+      const countEl = $("cartCount");
+      countEl.textContent = items.length;
+      if (bump) {
+        countEl.classList.remove("bump");
+        void countEl.offsetWidth;
+        countEl.classList.add("bump");
+      }
+
+      const total = items.reduce((acc, item) => acc + item.price, 0);
+      $("formTotalAmount").textContent = money(total);
+      $("drawerTotalAmount").textContent = money(total);
+      $("drawerCountLabel").textContent = items.length ? `${items.length} par${items.length > 1 ? "es" : ""}` : "";
+
+      const listHtml = items.map(cartItemHtml).join("");
+
+      $("formSummaryList").innerHTML = items.length ? listHtml : `
+        <div class="empty-summary">
+          <i class="fa-solid fa-shoe-prints"></i>
+          Aún no has seleccionado zapatillas. Haz clic en <strong>“Agregar”</strong> en cualquier modelo del catálogo.
+        </div>`;
+
+      $("drawerCartList").innerHTML = items.length ? listHtml : `
+        <div class="cart-empty">
+          <div class="icon"><i class="fa-solid fa-bag-shopping"></i></div>
+          <h4>Tu pedido está vacío</h4>
+          <p>Explora el catálogo y agrega los pares que te gusten.</p>
+          <a href="#catalogo" class="btn-primary" onclick="closeCart()"><i class="fa-solid fa-shoe-prints"></i> Ver catálogo</a>
+        </div>`;
+
+      const quickMsg = items.length
+        ? "Hola Hashoes.pe! Quisiera confirmar disponibilidad de:\n" + items.map((it, i) => `${i + 1}. ${it.name} (${it.subtitle}) - PEN${it.price.toFixed(2)}`).join("\n") + `\nTotal: ${money(total)}`
+        : "Hola Hashoes.pe, quisiera consultar por disponibilidad de zapatillas";
+      $("drawerWaQuick").href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(quickMsg)}`;
+
+      const empty = items.length === 0;
+      $("submitOrderBtn").classList.toggle("is-empty", empty);
+      $("submitOrderBtn").setAttribute("aria-disabled", empty);
+      $("submitOrderLabel").textContent = empty ? "Agrega zapatillas para enviar" : "Enviar pedido a Hashoes.pe";
+      if (!empty) $("formSummaryList").classList.remove("needs-items");
+
+      syncCartButtons();
+      if (qvProductId) renderQuickView();
+    }
+
+    function openCart() {
+      $("cartOverlay").classList.add("open");
+      $("cartDrawer").classList.add("open");
+      $("cartDrawer").setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
+    }
+
+    function closeCart() {
+      $("cartOverlay").classList.remove("open");
+      $("cartDrawer").classList.remove("open");
+      $("cartDrawer").setAttribute("aria-hidden", "true");
+      if (!qvProductId) document.body.classList.remove("no-scroll");
+    }
+
+    function toggleCart() {
+      $("cartDrawer").classList.contains("open") ? closeCart() : openCart();
+    }
+
+    /* =========================================================================
+       VISTA RÁPIDA (galería)
+       ========================================================================= */
+    let qvProductId = null;
+    let qvIndex = 0;
+
+    function openQuickView(productId) {
+      qvProductId = productId;
+      qvIndex = 0;
+      renderQuickView();
+      $("quickView").classList.add("open");
+      $("quickView").setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll");
+      setTimeout(() => $("qvCard").querySelector(".modal-close")?.focus(), 50);
+    }
+
+    function closeQuickView() {
+      const lastId = qvProductId;
+      qvProductId = null;
+      $("quickView").classList.remove("open");
+      $("quickView").setAttribute("aria-hidden", "true");
+      if (!$("cartDrawer").classList.contains("open")) document.body.classList.remove("no-scroll");
+      document.querySelector(`.product-card[data-id="${lastId}"] .product-title`)?.focus?.();
+    }
+
+    function qvGo(step) {
+      const total = getGallery(productById(qvProductId)).length;
+      qvIndex = (qvIndex + step + total) % total;
+      renderQuickView();
+    }
+
+    function qvSet(i) { qvIndex = i; renderQuickView(); }
+
+    function renderQuickView() {
+      const p = productById(qvProductId);
+      if (!p) return;
+      const gallery = getGallery(p);
+      const badge = getBadgeInfo(p);
+      const cond = getConditionBadge(p);
+      const inCart = cart.includes(p.id);
+      const directMsg = encodeURIComponent(
+        `Hola Hashoes.pe! Me interesa el modelo *${p.name}* (${p.subtitle}) de PEN${p.price.toFixed(2)}. ¿Sigue disponible?`
+      );
+      const multi = gallery.length > 1;
+
+      $("qvCard").innerHTML = `
+        <button class="icon-btn modal-close" onclick="closeQuickView()" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+        <div class="gallery">
+          <div class="gallery-main" id="qvMain">
+            <img src="${gallery[qvIndex]}" alt="${esc(p.name)} — foto ${qvIndex + 1}" onerror="this.replaceWith(document.createRange().createContextualFragment(renderSneakerSVG(productById(${p.id}))))" />
+            ${multi ? `
+              <button class="gal-nav prev" onclick="qvGo(-1)" aria-label="Foto anterior"><i class="fa-solid fa-chevron-left"></i></button>
+              <button class="gal-nav next" onclick="qvGo(1)" aria-label="Foto siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+              <span class="gal-counter">${qvIndex + 1} / ${gallery.length}</span>` : ""}
+          </div>
+          ${multi ? `<div class="gallery-thumbs">${gallery.map((src, i) => `
+            <button class="${i === qvIndex ? "active" : ""}" onclick="qvSet(${i})" aria-label="Ver foto ${i + 1}"><img src="${src}" alt="" loading="lazy" /></button>`).join("")}
+          </div>` : ""}
+        </div>
+        <div class="modal-info">
+          <div class="modal-badges">
+            <span class="badge badge-all">${esc(p.brand)}</span>
+            ${badge ? `<span class="badge ${badge.cls}">${badge.text}</span>` : ""}
+            ${cond ? `<span class="badge ${cond.cls}">${cond.text}</span>` : ""}
+            <span class="badge badge-all">#${p.id}</span>
+          </div>
+          <h3 id="qvTitle">${esc(p.name)}</h3>
+          <div class="exact-wa-subtitle" style="margin:0">${esc(p.subtitle)}</div>
+          <div class="modal-price"><small>PEN</small>${p.price.toFixed(2)}</div>
+          <div class="spec-list">
+            <div class="spec"><span>Talla EUR</span><strong>${p.size}</strong></div>
+            <div class="spec"><span>Largo</span><strong>${p.cm}</strong></div>
+            <div class="spec"><span>Detalle</span><strong>${esc(p.detail)}</strong></div>
+            <div class="spec"><span>Marca</span><strong>${esc(p.brand)}</strong></div>
+          </div>
+          <div class="modal-note"><i class="fa-solid fa-circle-info"></i><span>Par único: una sola unidad disponible en esta talla. Confirma stock por WhatsApp antes de pagar.</span></div>
+          <div class="modal-actions">
+            <button class="btn-primary${inCart ? " in-cart" : ""}" onclick="${inCart ? "closeQuickView(); openCart()" : `toggleInCart(${p.id})`}">
+              ${inCart ? `<i class="fa-solid fa-check"></i> En tu pedido — ver pedido` : `<i class="fa-solid fa-bag-shopping"></i> Agregar al pedido`}
+            </button>
+            <a class="btn-wa-full" href="https://wa.me/${WHATSAPP_NUMBER}?text=${directMsg}" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Consultar este par</a>
+            ${customPhotos[p.id]
+              ? `<button class="btn-link" onclick="removeCustomPhoto(${p.id})"><i class="fa-solid fa-rotate-left"></i> Quitar foto cargada manualmente</button>`
+              : `<button class="btn-link" onclick="triggerPhotoUpload(${p.id})"><i class="fa-solid fa-camera"></i> Asignar foto local</button>`}
+          </div>
+        </div>
+      `;
+
+      // Swipe en móviles
+      const main = $("qvMain");
+      if (multi && main) {
+        let x0 = null;
+        main.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; }, { passive: true });
+        main.addEventListener("touchend", e => {
+          if (x0 === null) return;
+          const dx = e.changedTouches[0].clientX - x0;
+          if (Math.abs(dx) > 40) qvGo(dx < 0 ? 1 : -1);
+          x0 = null;
+        });
+      }
+    }
+
+    /* =========================================================================
+       TOASTS
+       ========================================================================= */
+    function showToast({ title, sub = "", img = null, action = null }) {
+      const stack = $("toastStack");
+      const t = document.createElement("div");
+      t.className = "toast";
+      t.innerHTML = `
+        ${img ? `<img src="${img}" alt="" onerror="this.outerHTML='<span class=&quot;t-icon&quot;><i class=&quot;fa-solid fa-check&quot;></i></span>'" />` : `<span class="t-icon"><i class="fa-solid fa-check"></i></span>`}
+        <div class="t-text">${esc(title)}<small>${esc(sub)}</small></div>
+        ${action ? `<button type="button">${esc(action.label)}</button>` : ""}
+      `;
+      if (action) t.querySelector("button").addEventListener("click", () => { action.fn(); dismiss(); });
+      stack.appendChild(t);
+      while (stack.children.length > 3) stack.firstChild.remove();
+      const timer = setTimeout(dismiss, 3200);
+      function dismiss() {
+        clearTimeout(timer);
+        t.classList.add("out");
+        setTimeout(() => t.remove(), 350);
+      }
+    }
+
+    /* =========================================================================
+       ENVÍO DEL FORMULARIO A WHATSAPP
+       ========================================================================= */
+    function submitOrderToWhatsApp(e) {
+      e.preventDefault();
+
+      // Sin zapatillas en el pedido no se puede enviar
+      if (cart.length === 0) {
+        const list = $("formSummaryList");
+        list.classList.remove("needs-items");
+        void list.offsetWidth;
+        list.classList.add("needs-items");
+        showToast({
+          title: "Tu pedido está vacío",
+          sub: "Agrega al menos una zapatilla del catálogo",
+          action: { label: "Ver catálogo", fn: () => $("catalogo").scrollIntoView({ behavior: "smooth" }) }
+        });
+        return;
+      }
+
+      const required = ["clientName", "clientDoc", "clientPhone", "clientDistrict", "clientAddress"];
+      let firstInvalid = null;
+      required.forEach(id => {
+        const el = $(id);
+        const ok = el.value.trim().length > 0;
+        el.classList.toggle("invalid", !ok);
+        if (!ok && !firstInvalid) firstInvalid = el;
+      });
+      if (firstInvalid) {
+        firstInvalid.focus();
+        showToast({ title: "Completa los campos obligatorios", sub: "Los marcados con * son necesarios para tu envío" });
+        return;
+      }
+
+      const name = $("clientName").value.trim();
+      const doc = $("clientDoc").value.trim();
+      const phone = $("clientPhone").value.trim();
+      const delivery = $("deliveryType").value;
+      const district = $("clientDistrict").value.trim();
+      const address = $("clientAddress").value.trim();
+      const payment = document.querySelector('input[name="paymentMethod"]:checked').value;
+      const notes = $("clientNotes").value.trim();
+
+      let itemsText = "";
+      let total = 0;
+      const items = cart.map(productById);
+
+      items.forEach((item, i) => {
+        itemsText += `${i + 1}. *${item.name}* (${item.subtitle}) | PEN${item.price.toFixed(2)}\n`;
+        total += item.price;
+      });
+
+      const message =
+        `👟 *NUEVO PEDIDO WEB - HASHOES.PE* 👟\n` +
+        `━━━━━━━━━━━━━━━━━━━━\n` +
+        `👤 *Cliente:* ${name}\n` +
+        `🪪 *DNI/RUC:* ${doc}\n` +
+        `📱 *Teléfono:* ${phone}\n\n` +
+        `🛍️ *ZAPATILLAS SELECCIONADAS:*\n` +
+        `${itemsText}` +
+        `💰 *TOTAL ESTIMADO:* PEN ${total.toFixed(2)}\n` +
+        `━━━━━━━━━━━━━━━━━━━━\n` +
+        `🚚 *Modalidad:* ${delivery}\n` +
+        `📍 *Distrito/Ciudad:* ${district}\n` +
+        `🏠 *Dirección/Agencia:* ${address}\n` +
+        `💳 *Método de Pago:* ${payment}\n` +
+        (notes ? `📝 *Notas:* ${notes}\n` : ``) +
+        `━━━━━━━━━━━━━━━━━━━━\n` +
+        `Hola Hashoes.pe, envío mis datos para confirmar disponibilidad y coordinar el pago.`;
+
+      const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, "_blank");
+    }
+
+    /* =========================================================================
+       UI GENERAL: header, menú, hero, marquee, reveal
+       ========================================================================= */
+    function buildHero() {
+      const heroSrcs = HERO_PHOTOS.map(f => IMG_BASE + f);
+      [44, 36, 18].forEach(id => { const p = productById(id); if (p) heroSrcs.push(getCover(p)); });
+      document.querySelectorAll("#heroVisual .hero-photo").forEach((box, i) => {
+        const src = heroSrcs[i];
+        if (!src) { box.remove(); return; }
+        box.innerHTML = `<img src="${src}" alt="Zapatillas Hashoes.pe" fetchpriority="${i === 0 ? "high" : "auto"}" onerror="this.parentElement.style.display='none'" />`;
+      });
+
+      const brands = [...new Set(products.map(p => p.brand))];
+      $("statProducts").textContent = products.length;
+      $("heroCountTag").textContent = products.length;
+      $("statBrands").textContent = brands.length;
+      $("statFrom").textContent = `S/ ${Math.min(...products.map(p => p.price))}`;
+
+      const brandHtml = brands.map(b => `<span>${esc(b)}</span>`).join("");
+      $("brandsTrack").innerHTML = brandHtml + brandHtml;
+
+      const mt = $("marqueeTrack");
+      mt.innerHTML += mt.innerHTML;
+    }
+
+    function setupUI() {
+      const header = $("siteHeader");
+      const toTop = $("toTop");
+      const filtersBar = $("filtersBar");
+
+      const onScroll = () => {
+        const y = window.scrollY;
+        header.classList.toggle("scrolled", y > 30);
+        toTop.classList.toggle("show", y > 700);
+        const r = filtersBar.getBoundingClientRect();
+        filtersBar.classList.toggle("stuck", r.top <= header.offsetHeight + 1 && y > 400);
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+      const menuToggle = $("menuToggle");
+      const mobileNav = $("mobileNav");
+      menuToggle.addEventListener("click", () => {
+        const open = mobileNav.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", open);
+        menuToggle.innerHTML = open ? `<i class="fa-solid fa-xmark"></i>` : `<i class="fa-solid fa-bars"></i>`;
+      });
+      mobileNav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+        mobileNav.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", false);
+        menuToggle.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+      }));
+
+      document.querySelectorAll("[data-nav-cat]").forEach(el => el.addEventListener("click", (e) => {
+        filterByCategory(el.dataset.navCat);
+        if (el.tagName === "BUTTON") $("catalogo").scrollIntoView({ behavior: "smooth" });
+      }));
+
+      // Búsqueda con debounce
+      let t;
+      $("searchInput").addEventListener("input", () => {
+        $("clearSearch").classList.toggle("show", !!$("searchInput").value);
+        clearTimeout(t);
+        t = setTimeout(renderProducts, 160);
+      });
+      $("clearSearch").addEventListener("click", () => { clearFilter("searchInput"); $("searchInput").focus(); });
+      ["sizeFilter", "brandFilter", "sortFilter"].forEach(id => $(id).addEventListener("change", renderProducts));
+
+      // Formulario
+      $("amankayStyleForm").addEventListener("submit", submitOrderToWhatsApp);
+      $("amankayStyleForm").querySelectorAll(".form-control").forEach(el =>
+        el.addEventListener("input", () => el.classList.remove("invalid"))
+      );
+      $("clientDoc").addEventListener("input", e => { e.target.value = e.target.value.replace(/\D/g, ""); });
+
+      // Teclado: Esc y flechas
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          if (qvProductId) closeQuickView();
+          else if ($("cartDrawer").classList.contains("open")) closeCart();
+        }
+        if (qvProductId && e.key === "ArrowRight") qvGo(1);
+        if (qvProductId && e.key === "ArrowLeft") qvGo(-1);
+      });
+
+      // Reveal on scroll
+      const reveals = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver(entries => entries.forEach(en => {
+          if (en.isIntersecting) { en.target.classList.add("visible"); io.unobserve(en.target); }
+        }), { threshold: 0.12 });
+        reveals.forEach(r => io.observe(r));
+      } else {
+        reveals.forEach(r => r.classList.add("visible"));
+      }
+    }
+
+    // Inicializar
+    buildHero();
+    buildFilters();
+    setupUI();
+    renderProducts();
+    saveAndSyncCart();
+  </script>
+</body>
+</html>
